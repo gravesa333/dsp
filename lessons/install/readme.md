@@ -47,7 +47,9 @@ import sklearn
 
 Did you install Python 2 or 3? Why?  
 
-    I installed Python 3 because it is the recommended version (all HackerRank Python pre-work is configured     for Python 3 only).
+    I installed Python 3 because it is the recommended version 
+    (all HackerRank Python pre-work is configured for Python 3 
+    only).
 
 ### Q2. Which Python Version Installed   
 
