@@ -59,7 +59,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Histogram of Birth Weight](/Users/andrewgraves/Desktop/Histogram_of_birth_weight.png)
+![Histogram of Birth Weight](https://github.com/gravesa333/dsp/blob/master/lessons/statistics/Histogram_of_birth_weight.png)
 
 To calculate **Cohen's D**, we need to divide the difference of the means of the two weight groups (first babies and others) by the pooled_variance.  See below:
 
@@ -88,7 +88,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Histogram of Pregnancy_Length](/Users/andrewgraves/Desktop/Histogram_of_pregnancy_length.png)
+![Histogram of Pregnancy_Length](https://github.com/gravesa333/dsp/blob/master/lessons/statistics/Histogram_of_pregnancy_length.png)
 
 To calculate **Cohen's D**, we need to divide the difference of the means of the two pregnancy length groups (first babies and others) by the pooled_variance.  See below:
 
