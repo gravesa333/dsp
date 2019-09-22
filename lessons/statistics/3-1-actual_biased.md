@@ -1,13 +1,13 @@
 [Think Stats Chapter 3 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2004.html#toc31) (actual vs. biased)
 
 ### Chapter 3 Exercise 1
-Something like the class size paradox appears if you survey children and ask how many children are in their family. Families with many children are more likely to appear in your sample, and families with no children have no chance to be in the sample.
+*Something like the class size paradox appears if you survey children and ask how many children are in their family. Families with many children are more likely to appear in your sample, and families with no children have no chance to be in the sample.*
 
-*Use the NSFG respondent variable NUMKDHH to construct the actual distribution for the number of children under 18 in the household.
+*Use the NSFG respondent variable NUMKDHH to construct the actual distribution for the number of children under 18 in the household.*
 
-*Now compute the biased distribution we would see if we surveyed the children and asked them how many children under 18 (including themselves) are in their household.
+*Now compute the biased distribution we would see if we surveyed the children and asked them how many children under 18 (including themselves) are in their household.*
 
-*Plot the actual and biased distributions, and compute their means. As a starting place, you can use chap03ex.ipynb.
+*Plot the actual and biased distributions, and compute their means. As a starting place, you can use chap03ex.ipynb.*
 
 ---
 
@@ -79,8 +79,10 @@ child_num_new_count = {}
 child_num_new_prob = {}
 child_num_new_sum = 0
 
-for index, row in child_num_df.iterrows(): #iterate through dataframe
+for index, row in child_num_df.iterrows():    #iterate through dataframe
+
     #multiply the probabilities by the number of children who are in the respective bins
+    
     child_num_new_count.update({index: index*row['numkdhh']*row['child_num_pmf']}) 
     child_num_new_sum += index*row['numkdhh']*row['child_num_pmf']
 
