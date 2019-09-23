@@ -11,6 +11,7 @@ First, import the necessary modules.
 ```
 import random
 import matplotlib.pyplot as plt
+import pandas as pd
 ```
 
 Next, generate 1000 random numbers.
