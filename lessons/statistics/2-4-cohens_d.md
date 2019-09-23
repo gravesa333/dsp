@@ -1,7 +1,7 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
 ### Chapter 2 Exercise 4
-*Using the variable **totalwgt_lb**, investigate whether first babies are lighter or heavier than others. Compute Cohen's **d** to quantify the difference between the groups. How does it compare to the difference in pregnancy length?
+*Using the variable **totalwgt_lb**, investigate whether first babies are lighter or heavier than others. Compute Cohen's **d** to quantify the difference between the groups. How does it compare to the difference in pregnancy length?*
 
 First, we import the dataframe from nsfg.py. 
 
@@ -70,7 +70,7 @@ n1_weight, n2_weight = len(firsts_weight), len(others_weight)
 pooled_variance_weight = (n1_weight*variance_1_weight + n2_weight*variance_2_weight)/(n1_weight+n2_weight)
 d_weight = difference_weight/math.sqrt(pooled_variance_weight)
 ```
-The difference in means is calculated to be -0.089 standard deviations (first babies are lighter than other babies), which is insignificant.
+The difference in means is calculated to be **-0.089** standard deviations (first babies are lighter than other babies), which is insignificant.
 
 Moving on to pregnancy length, we'll create a histogram of that data as well:
 
@@ -94,13 +94,13 @@ To calculate **Cohen's D**, we need to divide the difference of the means of the
 
 ```
 difference_preg_length = firsts_preg_length.mean() - others_preg_length.mean()
-variance_1_preg_length, variance_2_preg_length = firsts_weight.var(), others_weight.var()
+variance_1_preg_length, variance_2_preg_length = firsts_preg_length.var(), others_preg_length.var()
 n1_preg_length, n2_preg_length = len(firsts_preg_length), len(others_preg_length)
 pooled_variance_preg_length = (n1_preg_length*variance_1_preg_length + n2_preg_length*variance_2_preg_length)/(n1_preg_length+n2_preg_length)
 d_preg_length = difference_preg_length/math.sqrt(pooled_variance_preg_length)
 d_preg_length
 ```
-The difference in means is calculated to be 0.055 standard deviations (first babies' pregnancy lengths are longer than other babies' pregnancy lengths), which is insignificant.
+The difference in means is calculated to be **0.029** standard deviations (first babies' pregnancy lengths are longer than other babies' pregnancy lengths), which is insignificant.
 
 Although the two Cohen's d values do not reflect a large effect size, it can generally be concluded that first babies are lighter and have longer pregnancy lengths
 

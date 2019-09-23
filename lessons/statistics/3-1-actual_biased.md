@@ -85,6 +85,7 @@ for index, row in child_num_df.iterrows():    #iterate through dataframe
     child_num_new_count.update({index: index*row['numkdhh']}) 
     child_num_new_sum += index*row['numkdhh']
 
+
 for index, row in child_num_new_count.items():
     new_row = row/child_num_new_sum    #normalize child_num_new_count to create biased pmf
     child_num_new_prob.update({index: new_row})
