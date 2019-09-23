@@ -90,9 +90,9 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 
 *The different types of identical and fraternal twins must be taken into account here.*
 
-*The probability of a male identical twin is 0.5**(1/300) = 1/600.*
+*The probability of a male identical twin is 0.5(1/300) = 1/600.*
 
-*Fraternal twins can be a male pair, male/female, female/male, or female pair.  The probability of a fraternal twin brother is 0.25**(1/125) = 1/500.*
+*Fraternal twins can be a male pair, male/female, female/male, or female pair.  The probability of a fraternal twin brother is 0.25(1/125) = 1/500.*
 
 *Given these probabilities, the probability that Elvis' twin brother was identical is:*
 
