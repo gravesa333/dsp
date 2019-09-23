@@ -56,23 +56,22 @@ for x, p in child_num_prob_dict.items():    #iterate through pmf dictionary
 
 ---
 
-Moving on to the biased distribution, create a dataframe of the bins and respective probabilities.
+Moving on to the biased distribution, create a dataframe of the bins.
 
 ```
-child_num_df = pd.DataFrame(child_num_count)    #add first row (data per bin)
-child_num_df['child_num_pmf'] = child_num_prob    #add second row (probabilities)
+child_num_df = pd.DataFrame(child_num_count)
 ```
 
-| Index | numkdhh | child_num_pmf |
-| --- | ------- | ------------- |
-| 0 | 3563 | 0.466178 |
-| 1 | 1636 | 0.214052 |
-| 2 | 1500 | 0.196258 |
-| 3 | 666 | 0.087139 |
-| 4 | 196 | 0.025644 |
-| 5 | 82 | 0.010729 |
+| Index | numkdhh |
+| --- | ------- |
+| 0 | 3563 |
+| 1 | 1636 |
+| 2 | 1500 |
+| 3 | 666 |
+| 4 | 196 |
+| 5 | 82 |
 
-Iterate through the dataframe and multiply the probabilities by the number of children who are in the respective bins.  Then normalize the data to create the biased distribution.
+Iterate through the dataframe and multiply the index (number of children in a household) by the number of children in the respective bins.  Then normalize the data to create the biased distribution.
 
 ```
 child_num_new_count = {}
@@ -81,10 +80,11 @@ child_num_new_sum = 0
 
 for index, row in child_num_df.iterrows():    #iterate through dataframe
 
-    #multiply the probabilities by the number of children who are in the respective bins
+    #multiply the index by the number of children in the respective bins
     
-    child_num_new_count.update({index: index*row['numkdhh']*row['child_num_pmf']}) 
-    child_num_new_sum += index*row['numkdhh']*row['child_num_pmf']
+    child_num_new_count.update({index: index*row['numkdhh']}) 
+    child_num_new_sum += index*row['numkdhh']
+
 
 for index, row in child_num_new_count.items():
     new_row = row/child_num_new_sum    #normalize child_num_new_count to create biased pmf
@@ -103,7 +103,7 @@ plt.legend(['Actual Distribution','Biased Distribution'])
 plt.bar
 ```
 
-![Actual vs Biased PMF](https://github.com/gravesa333/dsp/blob/master/lessons/statistics/actual_vs_biased_pmf_fixed.png)
+![Actual vs Biased PMF](https://github.com/gravesa333/dsp/blob/master/lessons/statistics/actual_vs_biased_pmf_fixed2.png)
 
 Finally, compute the mean for the biased distribution (same approach as for the actual distribution.
 
@@ -113,5 +113,5 @@ for x, p in child_num_new_prob.items():
     mean += x*p
 ```
 
-**The average number of children younger than 18 in a household (based on our biased distribution) is 1.89.  This is greater than the average calculated from the actual distribution (1.02).**
+**The average number of children younger than 18 in a household (based on our biased distribution) is 2.40.  This is greater than the average calculated from the actual distribution (1.02).**
 
