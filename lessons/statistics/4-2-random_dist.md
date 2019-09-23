@@ -27,17 +27,16 @@ for i in range(1000):
 Plot the PMF:
 
 ```
+series_1000_pmf = series_1000.value_counts(1000)    #turns data into probabilities based on 1000 bins
 plt.figure(figsize = [15,7])
-plt.hist(series_1000, density=True, label='PMF',
-         histtype='step', alpha=0.8, color='blue')
-plt.ylim(0, 0.01)
+plt.bar(list(range(1000)), height = series_1000_pmf, color="blue", alpha=0.5)
 plt.xlabel('Random Integers', fontsize = 15)
 plt.ylabel('Probability', fontsize = 15);
-plt.title('PMF for 1000 Random Integers between 0 and 1000',fontsize = 20)
-plt.show()
+plt.title('PMF for 1000 Random Integers between 0 and 1000',fontsize = 20);
+plt.bar
 ```
 
-![Random Integers PMF](https://github.com/gravesa333/dsp/blob/master/lessons/statistics/random_integers_pmf.png)
+![Random Integers PMF](https://github.com/gravesa333/dsp/blob/master/lessons/statistics/random_integers_bar_pmf.png)
 
 Plot the CDF:
 
