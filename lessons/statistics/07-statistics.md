@@ -107,7 +107,7 @@ How do frequentist and Bayesian statistics compare?
 
 *Bayesian statistics aim to describe the probability of an event based on certain conditions that are related to the event.  In other words, probability can be used to provide a degree of belief in an event based on relevant data. Probabilities may be updated if new data related to the event is obtained, and can be used to represent uncertainty in any event or hypothesis.*
 
-*Frequentist statistics aim to define probabilities devoid of opinion, and place high value on determining probability though experiments or a repeatable objective process.  Ultimately, it defines an event's probability as the limit of its frequency in a large number of trials of an experiment. Frequentist statistics does not attach probabilities to hypotheses or unknown values.*
+*Frequentist statistics aims to define probabilities devoid of opinion, and places high value on determining probability through experiments or a repeatable objective process.  Ultimately, it defines an event's probability as the limit of its frequency in a large number of trials of an experiment. Frequentist statistics does not attach probabilities to hypotheses or unknown values.*
 
 ---
 
